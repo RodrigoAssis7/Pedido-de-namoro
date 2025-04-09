@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Namora Comigo?</title>
+
+</head>
+
+
+<body>
+    <div id="conteudo">
+        <h2>Você aceita namorar comigo?</h2>
+        <button class="btn" onclick="sim()">SIM</button>
+        <button class="btn" onclick="desvia(this)" onmouseover="desvia(this)">NÃO</button>
+
+        <h6></h6>
+        <img src="https://i.pinimg.com/originals/b8/ec/1f/b8ec1f85f46240c560dd57f028c96fc8.gif" alt="">
+
+    </div>
+
+</body>
+
+<style>
+    #conteudo {
+        background: #ec44a1;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        padding: 10px;
+        left: 0;
+        top: 0;
+        text-align: center;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    .btn {
+        background: black;
+        color: white;
+        border: none;
+        padding: 10px;
+        width: 80px;
+        border-radius: 9px;
+    }
+</style>
+
+<script>
+    function sim() {
+        alert("VOCÊ ACEITOU NAMORAR COMIGO!!! ;)")
+    }
+    function desvia(t) {
+        var btn = t;
+        btn.style.position = 'absolute'
+        btn.style.bottom = geraPosicao(10, 90);
+        btn.style.laft = geraPosicao(10, 90);
+        console.log("opa, desviei...!");
+    }
+
+    function geraPosicao(min, max) {
+        return (Math.random() * (max - min) + min) + "%";
+    }
+
+</script>
+
+</html>
